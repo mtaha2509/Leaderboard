@@ -1,0 +1,69 @@
+.leaderboard-container {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.leaderboard-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  gap: 10px;
+  background-color: #56a0d3;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr; /* Match grid layout with leaderboard-header */
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+}
+
+.row.light {
+  background-color: #f9f9f9;
+}
+
+.row.white {
+  background-color: #fff;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.leaderboard-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.team-name {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .leaderboard-header,
+  .row {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .team {
+    grid-column: span 2;
+  }
+
+  .games-played,
+  .score {
+    display: none;
+  }
+}
